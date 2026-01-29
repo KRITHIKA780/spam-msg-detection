@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spam Detector Pro | AI Guard</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="mesh-background">
+        <div class="gradient-sphere sphere-1"></div>
+        <div class="gradient-sphere sphere-2"></div>
+        <div class="gradient-sphere sphere-3"></div>
+    </div>
+
+    <div class="app-wrapper">
+        <header class="app-header">
+            <div class="logo-stack">
+                <div class="logo-icon">
+                    <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M12 22C12 22 20 18 20 12V5L12 2L4 5V12C4 18 12 22 12 22Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M9 12L11 14L15 10" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </div>
+                <div class="logo-text">
+                    <h1>SpamDetector<span class="accent">Pro</span></h1>
+                    <p>Next-Gen Message Intelligence</p>
+                </div>
+            </div>
+        </header>
+
+        <main class="main-content">
+            <div class="glass-panel input-container">
+                <div class="panel-header">
+                    <span class="status-badge"><span class="pulse-dot"></span> System Ready</span>
+                </div>
+                <div class="textarea-wrapper">
+                    <textarea id="messageInput" placeholder="Enter message payload for deep scan..."></textarea>
+                    <div class="textarea-footer">
+                        <span id="charCount">0 Characters</span>
+                        <div class="typing-indicator" id="typingIndicator">
+                            <span></span><span></span><span></span>
+                        </div>
+                    </div>
+                </div>
+                <div class="action-bar">
+                    <button id="clearBtn" class="btn btn-secondary">Clear</button>
+                    <button id="analyzeBtn" class="btn btn-primary">
+                        <span>Analyze Message</span>
+                        <div class="btn-shine"></div>
+                    </button>
+                </div>
+            </div>
+
+            <div id="resultContainer" class="result-view hidden">
+                <div class="glass-panel result-card">
+                    <div class="result-header">
+                        <h3>Detection Results</h3>
+                        <span id="finalLabel" class="result-label">Checking...</span>
+                    </div>
+                    
+                    <div class="score-grid">
+                        <div class="score-card">
+                            <span class="score-title">Spam Score</span>
+                            <div class="score-value">
+                                <h2 id="spamScore">0%</h2>
+                                <div class="score-bar-bg">
+                                    <div id="scoreBar" class="score-bar-fill"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="analysis-details">
+                        <h4>Analysis Breakdown</h4>
+                        <div id="indicatorList" class="indicators">
+                            <!-- JS Inject -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <footer class="app-footer">
+            <p>&copy; 2026 SpamDetector Pro. Secured by Heuristic Intelligence.</p>
+        </footer>
+    </div>
+
+    <script src="spam_engine.js"></script>
+    <script src="main.js"></script>
+</body>
+</html>
